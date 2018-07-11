@@ -7,6 +7,13 @@ def new
   p @task = Task.new
 end
 
+def show 
+    @task = Task.find(params[:id])
+    
+end
+
+
+
 def create
   @task = Task.new(task_params)
   @task.save
