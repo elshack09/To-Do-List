@@ -16,8 +16,12 @@ end
 
 def create
   @task = Task.new(task_params)
-  @task.save
+  if  @task.save
     redirect_to tasks_path
+  else
+    render 'new'
+    # p @task.errors.full_messages
+  end
 end
 
 def edit
