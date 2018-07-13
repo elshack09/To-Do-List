@@ -37,7 +37,7 @@ end
 def complete
   @task = Task.find(params[:id])
   @task.update_attribute(:completed, params[:completed])
-  redirect_to tasks_path
+  redirect_to :back
 
 
 end
